@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-zoning_df = pd.read_csv('data/zoning.csv')
-listing_df = pd.read_csv('data/listing.csv')
-sale_df = pd.read_csv('data/sale.csv')
+zoning_df = pd.read_csv('../data/zoning.csv')
+listing_df = pd.read_csv('../data/listing.csv')
+sale_df = pd.read_csv('../data/sale.csv')
 
 housing_df = pd.merge(zoning_df, listing_df, left_on="Id", right_on="Id")
 housing_df = pd.merge(housing_df, sale_df, left_on="Id", right_on="Id")
